@@ -5,7 +5,7 @@ abstract class Pessoa {
 export class Vendedor extends Pessoa {
     private _matricula: string = '';
 
-    constructor(_nome: string, _email: string, matricula: string, _id?: number) {
+    constructor(_nome: string, matricula: string, _email: string, _id?: number) {
         super(_nome, _email, _id);
         this.Nome = _nome;
         this.Email = _email;
