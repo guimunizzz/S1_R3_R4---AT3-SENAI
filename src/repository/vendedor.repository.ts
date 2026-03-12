@@ -8,16 +8,17 @@ export class VendedorRepository {
         const [rows] = await db.execute<ResultSetHeader>(sql);
         return rows;
     }
+
     async selectById(id: number): Promise<ResultSetHeader> {
         const sql = 'SELECT * FROM Vendedores WHERE id_vendedor = ?';
         const values = [id];
         const [rows] = await db.execute<ResultSetHeader>(sql, values);
         return rows;
     }
+
     async adicionarVendedor(dados: Vendedor): Promise<ResultSetHeader> {
         const sql = 'INSERT INTO Vendedores (nome_vendedor, matricula, email_vendedor) VALUES (?,?,?);';
         const values = [dados.Nome, dados.Matricula, dados.Email];
-        console.log(`TESTE EMAIL VALIDAÇÃO: ${dados.Email}`)
         const [rows] = await db.execute<ResultSetHeader>(sql, values);
         return rows;
     }

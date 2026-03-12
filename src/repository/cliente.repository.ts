@@ -17,7 +17,6 @@ export class ClienteRepository {
     async adicionarCliente(dados: Cliente): Promise<ResultSetHeader> {
         const sql = 'INSERT INTO clientes (nome_cliente, cpf, email_cliente) VALUES (?,?,?);';
         const values = [dados.Nome, dados.Cpf, dados.Email];
-        console.log(`TESTE EMAIL VALIDAÇÃO: ${dados.Email}`)
         const [rows] = await db.execute<ResultSetHeader>(sql, values);
         return rows;
     }
