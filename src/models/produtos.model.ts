@@ -45,7 +45,7 @@ export class Produto {
         return new Produto(Nome, valor, idCategoria, id);
     }
 
-
+    implementar o multer para add imagem nos produtos
 
     private _validarNome(value: string): void {
         if (!value || value.trim().length <= 3) {
