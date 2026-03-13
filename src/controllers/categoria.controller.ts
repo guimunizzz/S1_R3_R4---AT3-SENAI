@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CategoriaService } from "../services/categoria.service";
 
 export class CategoriaController {
-    constructor(private _service = new CategoriaService()) { }
+    constructor(private readonly _service = new CategoriaService()) { }
 
     selecionaTodos = async (req: Request, res: Response) => {
         try {

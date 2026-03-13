@@ -5,7 +5,7 @@ import path from 'path';
 import { ProdutosService } from "../services/produtos.service";
 
 export class ProdutoController {
-    constructor(private _service = new ProdutosService()) { }
+    constructor(private readonly _service = new ProdutosService()) { }
 
     selecionaTodos = async (req: Request, res: Response) => {
         try {

@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { PedidosService } from "../services/pedidos.service";
 
 export class PedidosControllers {
-    constructor(private _service = new PedidosService()) { }
+    constructor(private readonly _service = new PedidosService()) { }
 
     selecionaTodos = async (req: Request, res: Response) => {
         try {

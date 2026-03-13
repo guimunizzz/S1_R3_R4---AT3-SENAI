@@ -25,7 +25,7 @@ export class PedidosService {
 	async deletarPedido(id: number) {
 		return await this._repository.deletarPedido(id);
 	}
-    
+
 	async atualizarTotalPedido(idPedido: number) {
 		return await this._repository.atualizarTotalPedido(idPedido);
 	}

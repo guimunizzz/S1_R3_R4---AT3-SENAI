@@ -2,7 +2,7 @@ import { CategoriaRepository } from "../repository/categoria.repository";
 import { Categoria } from "../models/categoria.model";
 
 export class CategoriaService {
-    constructor(private _repository = new CategoriaRepository()) { }
+    constructor(private readonly _repository = new CategoriaRepository()) { }
 
     async selecionarTodos() {
         return await this._repository.selectTodos();

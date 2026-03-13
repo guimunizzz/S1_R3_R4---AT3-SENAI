@@ -2,7 +2,7 @@ import { ClienteRepository } from "../repository/cliente.repository";
 import { Cliente } from "../models/cliente.model";
 
 export class ClienteService {
-    constructor(private _repository = new ClienteRepository()) { }
+    constructor(private readonly _repository = new ClienteRepository()) { }
 
     async selecionarTodos() {
         return await this._repository.selectTodos();

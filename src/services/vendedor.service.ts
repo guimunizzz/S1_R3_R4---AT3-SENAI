@@ -2,7 +2,7 @@ import { VendedorRepository } from "../repository/vendedor.repository";
 import { Vendedor } from "../models/vendedor.model";
 
 export class VendedorService {
-    constructor(private _repository = new VendedorRepository()) { }
+    constructor(private readonly _repository = new VendedorRepository()) { }
 
     async selecionarTodos() {
         return await this._repository.selectTodos();

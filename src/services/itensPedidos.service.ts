@@ -3,10 +3,7 @@ import { ItensPedidosRepository } from "../repository/itensPedidos.repository";
 import { PedidosRepository } from "../repository/pedidos.repository";
 
 export class ItensPedidosService {
-    constructor(
-        private readonly _repository = new ItensPedidosRepository(),
-        private readonly _pedidosRepository = new PedidosRepository()
-    ) { }
+    constructor(private readonly _repository = new ItensPedidosRepository(), private _pedidosRepository = new PedidosRepository()) { }
 
     async selecionarTodos() {
         return await this._repository.selectTodos();
@@ -23,7 +20,7 @@ export class ItensPedidosService {
         return resultado;
     }
 
-    async editarItem(id:number, idPedido: number, idProduto: number, Quantidade: number, ValorUnitario: number) {
+    async editarItem(id: number, idPedido: number, idProduto: number, Quantidade: number, ValorUnitario: number) {
         const item = ItensPedidos.editar(Quantidade, ValorUnitario, idPedido, idProduto);
         const resultado = await this._repository.editarItem(id, item);
         await this._pedidosRepository.atualizarTotalPedido(idPedido);

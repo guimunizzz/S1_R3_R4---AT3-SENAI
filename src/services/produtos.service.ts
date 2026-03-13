@@ -2,7 +2,7 @@ import { ProdutosRepository } from "../repository/produtos.repository";
 import { Produto } from "../models/produtos.model";
 
 export class ProdutosService {
-    constructor(private _repository = new ProdutosRepository()) { }
+    constructor(private readonly _repository = new ProdutosRepository()) { }
 
     async selecionarTodos() {
         return await this._repository.selectTodos();

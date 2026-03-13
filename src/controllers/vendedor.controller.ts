@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { VendedorService } from "../services/vendedor.service";
 
 export class VendedorController {
-    constructor(private _service = new VendedorService()) { }
+    constructor(private readonly _service = new VendedorService()) { }
 
     selecionaTodos = async (req: Request, res: Response) => {
         try {

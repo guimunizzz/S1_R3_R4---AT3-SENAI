@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { ClienteService } from "../services/cliente.service";
 
 export class ClienteController {
-    constructor(private _service = new ClienteService()) { }
+    constructor(private readonly _service = new ClienteService()) { }
 
     selecionaTodos = async (req: Request, res: Response) => {
         try {
