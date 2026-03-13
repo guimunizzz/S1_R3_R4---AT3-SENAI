@@ -3,7 +3,7 @@ import { ItensPedidosRepository } from "../repository/itensPedidos.repository";
 import { PedidosRepository } from "../repository/pedidos.repository";
 
 export class ItensPedidosService {
-    constructor(private readonly _repository = new ItensPedidosRepository(), private _pedidosRepository = new PedidosRepository()) { }
+    constructor(private readonly _repository = new ItensPedidosRepository(), private readonly _pedidosRepository = new PedidosRepository()) { }
 
     async selecionarTodos() {
         return await this._repository.selectTodos();
