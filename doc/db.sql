@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Vendedores (
 
 CREATE TABLE IF NOT EXISTS Categorias (
 	id_categoria INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL
+    descricao VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Produtos (
@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS Produtos (
     vinculo_imagem VARCHAR (100),
     id_categoriaFK INT,
     FOREIGN KEY (id_categoriaFK) REFERENCES Categorias (id_categoria)
+    ON DELETE CASCADE
 );
 
 
@@ -39,6 +40,7 @@ CREATE TABLE IF NOT EXISTS Pedidos (
     id_vendedorFK INT,
     FOREIGN KEY (id_clienteFK) REFERENCES Clientes(id_cliente),
     FOREIGN KEY (id_vendedorFK) REFERENCES Vendedores(id_vendedor)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Itens_Pedidos (
@@ -49,6 +51,7 @@ CREATE TABLE IF NOT EXISTS Itens_Pedidos (
 	valorUnitario DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_pedidoFK) REFERENCES Pedidos(id_pedido),
     FOREIGN KEY (id_produtoFK) REFERENCES Produtos(id_produto)
+    ON DELETE CASCADE
 );
 
 

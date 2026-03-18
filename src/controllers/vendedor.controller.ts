@@ -21,8 +21,8 @@ export class VendedorController {
                 }
                 res.status(200).json({ resultado })
             }
-            const clientes = await this._service.selecionarTodos();
-            res.status(200).json({ clientes })
+            const vendedores = await this._service.selecionarTodos();
+            res.status(200).json({ vendedores })
         } catch (error: unknown) {
             console.error(error);
             if (error instanceof Error) {
@@ -78,6 +78,7 @@ export class VendedorController {
             })
         }
     }
+
     deletarVendedor = async (req: Request, res: Response) => {
         try {
             const id = Number(req.query.id);

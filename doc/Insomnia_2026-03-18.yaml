@@ -48,7 +48,7 @@ collection:
         meta:
           id: req_2e2b4cbdb903440891bf8539bff506f9
           created: 1773321609298
-          modified: 1773322490884
+          modified: 1773832214051
           isPrivate: false
           description: ""
           sortKey: -1773321609298
@@ -57,7 +57,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"nome": "Jair",
+            	"nome": "Lucas",
             	"cpf": "98765432100",
             	"email": "teste2@gmail.com"
             }
@@ -119,7 +119,7 @@ collection:
         meta:
           id: req_e4928e1aad1e49999aa200aeb6066a02
           created: 1773321656860
-          modified: 1773323153688
+          modified: 1773832482371
           isPrivate: false
           description: ""
           sortKey: -1773321646843
@@ -183,7 +183,7 @@ collection:
         meta:
           id: req_8506b8af1c0d47ffb4f52d4348286f79
           created: 1773323164118
-          modified: 1773323300157
+          modified: 1773832283272
           isPrivate: false
           description: ""
           sortKey: -1773321609298
@@ -192,7 +192,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"nome": "Maria",
+            	"nome": "Ronaldo",
             	"matricula": "00002",
             	"email": "teste2@gmail.com"
             }
@@ -318,7 +318,7 @@ collection:
         meta:
           id: req_ced0ea60c3cc43d28ca0900005a0b047
           created: 1773324145180
-          modified: 1773324407356
+          modified: 1773832357767
           isPrivate: false
           description: ""
           sortKey: -1773321609298
@@ -327,7 +327,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"descricao": "Placas de Video"
+            	"descricao": "Processadores"
             }
         headers:
           - name: Content-Type
@@ -449,7 +449,7 @@ collection:
         meta:
           id: req_e2bc00538db046d8b1a36484665be914
           created: 1773401292583
-          modified: 1773401595660
+          modified: 1773832401941
           isPrivate: false
           description: ""
           sortKey: -1773321609298
@@ -458,22 +458,22 @@ collection:
           mimeType: multipart/form-data
           params:
             - name: nome
-              value: Rtx 4060
+              value: Ryzen 5 5600
               description: ""
               disabled: false
             - name: valor
-              value: "1999"
+              value: "800"
               description: ""
               disabled: false
             - name: idCategoria
-              value: "3"
+              value: "2"
               description: ""
               disabled: false
             - name: vinculoImagem
               value: ""
               description: ""
               disabled: false
-              fileName: C:\Users\43737514801\Downloads\61q0rsE3ezL.jpg
+              fileName: C:\Users\43737514801\Downloads\51So7GoGvxL._AC_UF894,1000_QL80_.jpg
               type: file
         headers:
           - name: Content-Type
@@ -610,7 +610,7 @@ collection:
         meta:
           id: req_384a480bfb074c20bd42db5fb8c670cf
           created: 1773407771184
-          modified: 1773408161931
+          modified: 1773833519899
           isPrivate: false
           description: ""
           sortKey: -1773321609298
@@ -619,7 +619,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"id_cliente": 3,
+            	"id_cliente": 2,
             	"id_vendedor": 1
             }
         headers:
@@ -744,7 +744,7 @@ collection:
         meta:
           id: req_db9694c4ff394334bd7d380001809a88
           created: 1773408286400
-          modified: 1773410618289
+          modified: 1773833540347
           isPrivate: false
           description: ""
           sortKey: -1773321609298
@@ -754,9 +754,9 @@ collection:
           text: |-
             {
             	"quantidade": 1,
-            	"valorUnitario": 1999,
+            	"valorUnitario": 800,
             	"idPedido": 3,
-            	"idProduto": 3
+            	"idProduto": 2
             }
         headers:
           - name: Content-Type
