@@ -78,7 +78,6 @@ export class VendedorController {
             })
         }
     }
-
     deletarVendedor = async (req: Request, res: Response) => {
         try {
             const id = Number(req.query.id);

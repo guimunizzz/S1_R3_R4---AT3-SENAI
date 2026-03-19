@@ -28,12 +28,12 @@ export class ItensPedidos {
     }
 
     public set Quantidade(value: number) {
-        this._validarNumero(value, 'Quantidade');
+        this._validarQuantidade(value);
         this._quantidade = value;
     }
 
     public set ValorUnitario(value: number) {
-        this._validarNumero(value, 'Valor unitário');
+        this._validarValorUnitario(value);
         this._valorUnitario = value;
     }
 
@@ -45,9 +45,14 @@ export class ItensPedidos {
         return new ItensPedidos(Quantidade, ValorUnitario, IdPedido, IdProduto);
     }
 
-    private _validarNumero(value: number, campo: string): void {
+    private _validarQuantidade(value: number): void {
         if (Number.isNaN(value) || value <= 0) {
-            throw new TypeError(`${campo} inválido, deve ser um número maior que zero`);
+            throw new TypeError(`Quantidade inválido, deve ser um número maior que zero`);
+        }
+    }
+    private _validarValorUnitario(value: number): void {
+        if (Number.isNaN(value) || value <= 0) {
+            throw new TypeError(`Valor inválido, deve ser um número maior que zero`);
         }
     }
 }
